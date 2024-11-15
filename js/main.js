@@ -1,1 +1,1 @@
-alert("Hello World!");
+let dictionnaire = ["BONJOUR","VIE","NATURE","MAISON"]
