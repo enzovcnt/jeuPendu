@@ -5,10 +5,14 @@ let alphabet = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
 function motRandom(){
     let idx = Math.floor(Math.random() * dictionnaire.length);
     let dico = dictionnaire[idx];
-    let motCache = dico.replaceAll(dico[idx], "_");
-    apparition.innerHTML = motCache
-    console.log(dico);
+    function motCache(){
+        return cache = dico.replace(dico[idx], "_");
+    }
+    motCache().repeat(3);
+    apparition.innerHTML = motCache();
+    console.log(motCache());
 }
+
 
 const apparition = document.querySelector("p")
 const btnStart = document.querySelector(".btnStart")
@@ -18,5 +22,4 @@ btnStart.addEventListener("click", ()=>{
 })
 
 // étape = première et dernière lettre apparaissent mais le reste caché par _ et si même lettre que début ou fin apparait aussi
-
 
