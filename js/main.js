@@ -2,10 +2,10 @@ let dictionnaire = ["BONJOUR","VIE","NATURE","MAISON"]
 let alphabet = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
 
 
-console.log(dictionnaire)
-
-function motRandom (){
-    let choixmot = Math.round(Math.random()*10);
+function motRandom(dictionnaire = [""]){
+    let idx = Math.floor(Math.random() * dictionnaire.length);
+    let dico = dictionnaire[idx];
+    console.log(dico);
 }
-let choixmot = Math.round(Math.random());
-console.log(choixmot)
+
+console.log(dictionnaire.length)
